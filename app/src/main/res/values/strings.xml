@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Village</string>
+    <string name="borrowTitle">빌리기</string>
+    <string name="lendTitle">빌려주기</string>
+    <string name="contactBtn">연락하기</string>
+    <string name="urgent">긴급</string>
+    <string name="normal">일반</string>
+</resources>

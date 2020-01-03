@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top"
+        android:id="@+id/top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/contactBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:background="@drawable/upload_edit"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/category"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/upload_edit"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/price"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/upload_edit"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/time"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/upload_edit"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/urgentSetting"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/urgent"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:background="@color/colorSelect"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/normal"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:background="@color/colorUnselect"/>
+                
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/urgentDetail1"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/urgentDetail2"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/detail"
+                android:textSize="18sp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"/>
+            
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="top|left"
+                android:scrollbars="vertical"
+                android:maxLines="10"
+                android:lines="8"
+                android:inputType="textMultiLine"
+                android:background="@drawable/detail_edit"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:id="@+id/contactBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorContactBtn"
+        android:text="@string/upload"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -5,4 +5,14 @@
     <string name="contactBtn">연락하기</string>
     <string name="urgent">긴급</string>
     <string name="normal">일반</string>
+
+    <string name="title">제목</string>
+    <string name="category">카테고리</string>
+    <string name="price">가격</string>
+    <string name="time">기간</string>
+    <string name="detail">상세 설명</string>
+    <string name="urgentSetting">긴급 설정</string>
+    <string name="urgentDetail1">긴급 선택 시 선택한 카테고리 사용자에게 푸시알림이 가고</string>
+    <string name="urgentDetail2">2시간 동안만 매물리스트에 올라갑니다.</string>
+    <string name="upload">등록하기</string>
 </resources>

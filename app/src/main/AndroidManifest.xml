@@ -10,9 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".TabActivity">
-
-        </activity>
+        <activity android:name=".TabActivity" />
         <activity android:name=".BorrowDetailActivity" />
         <activity android:name=".SplashscreenActivity">
             <intent-filter>
@@ -21,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LendDetailActivity" />
+        <activity android:name=".BorrowUploadActivity"></activity>
     </application>
 
 </manifest>

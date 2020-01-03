@@ -4,7 +4,7 @@ public class RecyclerViewItemLend {
     private String title;
     private String name;
     private String price;
-
+    private boolean isLike;
 
     public void setTitle(String title){
         this.title = title;
@@ -18,6 +18,10 @@ public class RecyclerViewItemLend {
         this.price = price;
     }
 
+    public void setIsLike(boolean isLike){
+        this.isLike = isLike;
+    }
+
     public String getTitle(){
         return this.title;
     }
@@ -28,5 +32,9 @@ public class RecyclerViewItemLend {
 
     public String getPrice(){
         return this.price;
+    }
+
+    public boolean getIsLike(){
+        return this.isLike;
     }
 }

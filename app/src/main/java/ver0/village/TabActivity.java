@@ -1,9 +1,9 @@
 package ver0.village;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 
+import ver0.village.Dialog.UploadDialog;
 import ver0.village.utils.BaseActivity;
 import ver0.village.utils.CustomViewPager;
 import ver0.village.utils.TabPagerAdapter;
@@ -12,6 +12,8 @@ public class TabActivity extends BaseActivity {
 
     TabLayout tabLayout;
     CustomViewPager viewPager;
+
+    int prevTab = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class TabActivity extends BaseActivity {
         viewPager = findViewById(R.id.pager);
 
         // Creating TabPagerAdapter adapter
-        TabPagerAdapter pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        final TabPagerAdapter pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         viewPager.setPagingEnabled(false);
@@ -41,7 +43,15 @@ public class TabActivity extends BaseActivity {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+                if(tab.getPosition()!=3){
+                    viewPager.setCurrentItem(tab.getPosition());
+                    prevTab = tab.getPosition();
+                }
+                else{
+                    UploadDialog customDialog = new UploadDialog(TabActivity.this);
+                    customDialog.callFunction();
+                    tabLayout.getTabAt(prevTab).select();
+                }
             }
 
             @Override
@@ -55,4 +65,6 @@ public class TabActivity extends BaseActivity {
             }
         });
     }
+
+
 }

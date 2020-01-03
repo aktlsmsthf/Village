@@ -1,6 +1,7 @@
 package ver0.village.Recycler;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.media.Image;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import ver0.village.BorrowDetailActivity;
 import ver0.village.R;
 
 import java.util.ArrayList;
@@ -28,6 +31,8 @@ public class RecyclerViewAdapterBorrow extends RecyclerView.Adapter<RecyclerView
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener{
+
+        View totalView;
         Button urgentBtn;
         TextView titleText;
         TextView nameText;
@@ -37,6 +42,7 @@ public class RecyclerViewAdapterBorrow extends RecyclerView.Adapter<RecyclerView
             super(view);
             view.setOnClickListener(this);
 
+            totalView = view;
             urgentBtn = view.findViewById(R.id.urgentBtn);
             titleText = view.findViewById(R.id.titleText);
             nameText = view.findViewById(R.id.nameText);
@@ -87,6 +93,14 @@ public class RecyclerViewAdapterBorrow extends RecyclerView.Adapter<RecyclerView
         if(Build.VERSION.SDK_INT >= 21) {
             holder.profileImage.setClipToOutline(true);
         }
+
+        holder.totalView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, BorrowDetailActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.

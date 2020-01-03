@@ -1,8 +1,9 @@
-package ver0.village.utils;
+package ver0.village.Slider;
 
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.DividerItemDecoration;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import ver0.village.BorrowDetailActivity;
 import ver0.village.R;
 import ver0.village.Recycler.RecyclerViewAdapterBorrow;
 import ver0.village.Recycler.RecyclerViewAdapterLend;
@@ -57,19 +59,40 @@ public class SlideAdapterHome extends PagerAdapter {
 
             borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
             borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
+            borrowAdapter.addItem(true, "축구화 빌립니다.", "이창훈");
+            borrowAdapter.addItem(false, "축구공 빌립니다.", "박성주");
 
             mLayoutManager = new LinearLayoutManager(context);
             recyclerView.addItemDecoration(new DividerItemDecoration((Activity)context, DividerItemDecoration.VERTICAL));
             recyclerView.setLayoutManager(mLayoutManager);
             recyclerView.setAdapter(borrowAdapter);
+
+
         }
         else{
             typeText.setText(context.getString(R.string.lendTitle));
 
             RecyclerViewAdapterLend lendAdapter = new RecyclerViewAdapterLend();
 
-            lendAdapter.addItem("축구공 빌려드립니다.", "박성주", "10000원");
-            lendAdapter.addItem("축구화 빌려드립니다.", "이창훈", "20000원");
+            lendAdapter.addItem("축구공 빌려드립니다.", "박성주", "10000원", true);
+            lendAdapter.addItem("축구화 빌려드립니다.", "이창훈", "20000원", false);
+            lendAdapter.addItem("축구공 빌려드립니다.", "박성주", "10000원", true);
+            lendAdapter.addItem("축구화 빌려드립니다.", "이창훈", "20000원", false);
+            lendAdapter.addItem("축구공 빌려드립니다.", "박성주", "10000원", true);
+            lendAdapter.addItem("축구화 빌려드립니다.", "이창훈", "20000원", false);
+            lendAdapter.addItem("축구공 빌려드립니다.", "박성주", "10000원", true);
+            lendAdapter.addItem("축구화 빌려드립니다.", "이창훈", "20000원", false);
+
 
             mLayoutManager = new LinearLayoutManager(context);
             recyclerView.addItemDecoration(new DividerItemDecoration((Activity)context, DividerItemDecoration.VERTICAL));

@@ -31,11 +31,10 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
                 TalkFragment tabFragment2 = new TalkFragment();
                 return tabFragment2;
             case 2:
-                UploadFragment tabFragment3 = new UploadFragment();
+                AlarmFragment tabFragment3 = new AlarmFragment();
                 return tabFragment3;
             case 3:
-                AlarmFragment tabFragment4 = new AlarmFragment();
-                return tabFragment4;
+                return null;
             default:
                 return null;
         }
